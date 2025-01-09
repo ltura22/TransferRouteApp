@@ -53,6 +53,21 @@ java -jar target/TransferRouteApp-1.0.0.jar
     "totalWeight": 15
   }
   ```
+  
+### CURL Command
+  ```sh
+  curl -X POST http://localhost:8080/api/maximum-cost \
+  -H "Content-Type: application/json" \
+  -d '{
+  "maxWeight": 15,
+  "availableTransfers": [
+  {"weight": 5, "cost": 10},
+  {"weight": 10, "cost": 20},
+  {"weight": 3, "cost": 5},
+  {"weight": 8, "cost": 15}
+  ]
+  }'
+  ```
 
 ## Running Tests
 
@@ -60,3 +75,7 @@ To run tests, ensure that the server is running and use the following command:
 ```sh
 mvn test
 ```
+
+
+
+
